@@ -5,7 +5,7 @@ const { Kafka } = require("kafkajs");
 
 
 
-// const { Partitioners } = require('kafkajs')
+
 async function produce() {
     const kafka = new Kafka({
         clientId: "sam",
@@ -13,12 +13,14 @@ async function produce() {
     });
 
     
-   // const jerseyNumber = process.argv[2];
+   
 
    const producer = kafka.producer();
    await producer.connect();
    console.log("Producer connected");
-
+    
+  // sending messages to the topics
+    
    await producer.send({
      topic: 'samirrrr',
      messages: [
