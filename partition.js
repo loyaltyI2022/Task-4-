@@ -13,7 +13,7 @@ async function createPartition() {
     // to create topics in kafka
     await admin.createTopics({
         topics: [
-            {    // define topic and partition name here
+            {    // define topic and number of partition
                 topic: "samirrrr",
                 numPartitions: 1,
             },
